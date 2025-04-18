@@ -12,8 +12,11 @@ import lombok.extern.slf4j.Slf4j;
 	@RequestMapping("/")
 	public String home() {
 
+
 		log.info("hello.boot33333");
 		System.out.println("hello boot");
+
+
 		return "hello";
  }
 }
