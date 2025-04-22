@@ -1,0 +1,18 @@
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.boot.boot_reply_mysql.dao.CommentDAO">
+
+    <select id="findAll" resultType="com.boot.boot_reply_mysql.dto.CommentDTO">
+        select commentNo, commentWriter, commentContent, boardNo, commentCreatedTime from board_comment where boardNo = #{boardNo} order by commentNo desc
+    </select>
+    
+    <insert id="save">
+        insert into board_comment(commentWriter, commentContent, boardNo) values(#{commentWriter},#{commentContent},#{boardNo})
+    </insert>
+    
+</mapper>
+
+
+
